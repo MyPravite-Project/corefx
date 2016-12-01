@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>My Project by MyPravite-Project</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>My Project</h1>
+        <h2>This repo contains the .NET Core foundational libraries, called CoreFX. It includes classes for collections, file systems, console, XML, async and many others.</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/MyPravite-Project/corefx/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/MyPravite-Project/corefx/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/MyPravite-Project/corefx" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="net-core-libraries-corefx" class="anchor" href="#net-core-libraries-corefx" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.NET Core Libraries (CoreFX)</h1>
+
+<p>The corefx repo contains the library implementation (called "CoreFX") for <a href="http://github.com/dotnet/core">.NET Core</a>. It includes System.Collections, System.IO, System.Xml, and many other components. You can see more information in <a href="Documentation/README.md">Documentation</a>. The corresponding <a href="https://github.com/dotnet/coreclr">.NET Core Runtime repo</a> contains the runtime implementation (called "CoreCLR") for .NET Core. It includes RyuJIT, the .NET GC, and many other components. Runtime-specific library code - namely <a href="https://github.com/dotnet/coreclr/tree/master/src/mscorlib">mscorlib</a> - lives in the CoreCLR repo. It needs to be built and versioned in tandem with the runtime. The rest of CoreFX is agnostic of runtime-implementation and can be run on any compatible .NET runtime.</p>
+
+<h2>
+<a id="source-index" class="anchor" href="#source-index" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source Index</h2>
+
+<p>.NET Core now has a source index: <a href="https://source.dot.net">https://source.dot.net</a></p>
+
+<h2>
+<a id="build--test-status" class="anchor" href="#build--test-status" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build &amp; Test Status</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="right">Inner Loop</th>
+<th align="right">Outer Loop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>CentOS 7.1</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/centos7.1_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/centos7.1_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/centos7.1_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/centos7.1_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_centos7.1_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_centos7.1_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_centos7.1_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_centos7.1_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Debian 8</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/debian8.4_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/debian8.4_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/debian8.4_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/debian8.4_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/debian8.4_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/debian8.4_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/debian8.4_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/debian8.4_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Fedora 23</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/fedora23_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/fedora23_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/fedora23_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/fedora23_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_fedora23_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_fedora23_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_fedora23_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_fedora23_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Fedora 24</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/fedora24_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/fedora24_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/fedora24_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/fedora24_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_fedora24_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_fedora24_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_fedora24_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_fedora24_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>openSUSE 13.2</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/opensuse13.2_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/opensuse13.2_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/opensuse13.2_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/opensuse13.2_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_opensuse13.2_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_opensuse13.2_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_opensuse13.2_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_opensuse13.2_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>openSUSE 42.1</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/opensuse42.1_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/opensuse42.1_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/opensuse42.1_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/opensuse42.1_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_opensuse42.1_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_opensuse42.1_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_opensuse42.1_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_opensuse42.1_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>OS X 10.11</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/osx_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/osx_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/osx_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/osx_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_osx_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_osx_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_osx_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_osx_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Red Hat 7.2</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/rhel7.2_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/rhel7.2_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/rhel7.2_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/rhel7.2_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_rhel7.2_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_rhel7.2_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_rhel7.2_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_rhel7.2_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Ubuntu 14.04</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu14.04_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu14.04_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu14.04_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu14.04_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu14.04_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu14.04_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu14.04_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu14.04_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Ubuntu 16.04</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu16.04_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu16.04_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu16.04_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu16.04_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu16.04_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu16.04_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu16.04_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu16.04_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Ubuntu 16.10</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu16.10_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu16.10_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/ubuntu16.10_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/ubuntu16.10_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu16.10_debug/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu16.10_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_ubuntu16.10_release/"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_ubuntu16.10_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Windows 7</strong></td>
+<td align="right"></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_win7_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_win7_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_win7_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_win7_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Windows 8.1</strong></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/windows_nt_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/windows_nt_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/windows_nt_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/windows_nt_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_windows_nt_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_windows_nt_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_windows_nt_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_windows_nt_release.svg?label=x64-release" alt="x64-release"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/code_coverage_windows/Code_Coverage_Report"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/code_coverage_windows.svg?label=code%20coverage" alt="code coverage"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/code_coverage_windows_local/Code_Coverage_Report"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/code_coverage_windows_local.svg?label=local%20code%20coverage" alt="local coverage"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Windows 10</strong></td>
+<td align="right"></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_win10_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_win10_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_win10_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_win10_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+<tr>
+<td align="left"><strong>Windows Nano Server 2016</strong></td>
+<td align="right"></td>
+<td align="right">
+<a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_winnano16_debug"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_winnano16_debug.svg?label=x64-debug" alt="x64-debug"></a><br><a href="https://ci.dot.net/job/dotnet_corefx/job/master/job/outerloop_winnano16_release"><img src="https://img.shields.io/jenkins/s/https/ci.dot.net/job/dotnet_corefx/job/master/outerloop_winnano16_release.svg?label=x64-release" alt="x64-release"></a>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2>
+<a id="how-to-engage-contribute-and-provide-feedback" class="anchor" href="#how-to-engage-contribute-and-provide-feedback" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to Engage, Contribute and Provide Feedback</h2>
+
+<p>Some of the best ways to contribute are to try things out, file bugs, and join in design conversations. If you are having issues with the Full .NET Framework or .NET Runtime, the best way to file a bug is at <a href="http://connect.microsoft.com/VisualStudio">Connect</a> or through <a href="https://support.microsoft.com/en-us/contactus?ws=support">Product Support</a> if you have a contract.</p>
+
+<p>Want to get more familiar with what's going on in the code?</p>
+
+<ul>
+<li>
+<a href="https://github.com/dotnet/corefx/pulls">Pull requests</a>: <a href="https://github.com/dotnet/corefx/pulls?q=is%3Aopen+is%3Apr">Open</a>/<a href="https://github.com/dotnet/corefx/pulls?q=is%3Apr+is%3Aclosed">Closed</a>
+</li>
+</ul>
+
+<p>Looking for something to work on? The list of <a href="https://github.com/dotnet/corefx/labels/up%20for%20grabs">up-for-grabs issues</a> is a great place to start. See some of our guides for more details:</p>
+
+<ul>
+<li><a href="Documentation/project-docs/contributing.md">Contributing Guide</a></li>
+<li><a href="Documentation/project-docs/developer-guide.md">Developer Guide</a></li>
+<li><a href="Documentation/project-docs/issue-guide.md">Issue Guide</a></li>
+</ul>
+
+<p>We've also started to share some of our direction via more higher-level documentation, specifically:</p>
+
+<ul>
+<li><a href="Documentation/project-docs/triage.md">How we triage</a></li>
+<li><a href="Documentation/project-docs/porting.md">Porting to .NET Core</a></li>
+</ul>
+
+<p>You are also encouraged to start a discussion by filing an issue or creating a
+gist.</p>
+
+<p>You can discuss .NET OSS more generally in the <a href="http://forums.dotnetfoundation.org/">.NET Foundation forums</a>.</p>
+
+<p>Want to chat with other members of the CoreFX community?</p>
+
+<p><a href="http://tattoocoder.com/aspnet-slack-sign-up/"><img src="https://aspnetcoreslack.herokuapp.com/badge.svg?2" alt=".NET Slack Status"></a> <a href="https://gitter.im/dotnet/corefx?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/dotnet/corefx"></a></p>
+
+<p>This project has adopted the code of conduct defined by the <a href="http://contributor-covenant.org/">Contributor Covenant</a>
+to clarify expected behavior in our community. For more information, see the <a href="http://www.dotnetfoundation.org/code-of-conduct">.NET Foundation Code of Conduct</a>.</p>
+
+<h3>
+<a id="reporting-security-issues-and-security-bugs" class="anchor" href="#reporting-security-issues-and-security-bugs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reporting security issues and security bugs</h3>
+
+<p>Security issues and bugs should be reported privately, via email, to the
+Microsoft Security Response Center (MSRC) <a href="mailto:secure@microsoft.com">secure@microsoft.com</a>. You should
+receive a response within 24 hours. If for some reason you do not, please follow
+up via email to ensure we received your original message. Further information,
+including the MSRC PGP key, can be found in the
+<a href="https://technet.microsoft.com/en-us/security/ff852094.aspx">Security TechCenter</a>.</p>
+
+<h2>
+<a id="net-core-library-components" class="anchor" href="#net-core-library-components" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.NET Core Library Components</h2>
+
+<p>The repo contains the source for each of the assemblies that comprises .NET Core.  Each <code>Microsoft.*</code> or <code>System.*</code> folder under
+<a href="https://github.com/dotnet/corefx/tree/master/src">src</a> represents an individual library.  Each such folder may contain a <code>ref</code> folder,
+which contains the source representing the "contract" or "reference assembly" for that library.  It may also contain a <code>src</code> folder,
+which contains the source for some or all of the implementation for that library (some implementation may live in mscorlib in the 
+<a href="https://github.com/dotnet/coreclr">coreclr repo</a>, with the build tooling generating type forwards from the library assembly to mscorlib.)<br>
+It may also contain a <code>test</code> folder containing the tests associated with that library, whether the implementation source lives in corefx 
+or in coreclr.</p>
+
+<h2>
+<a id="daily-builds" class="anchor" href="#daily-builds" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Daily Builds</h2>
+
+<p>Daily builds of .NET Core components are published to <a href="https://dotnet.myget.org/gallery/dotnet-core">dotnet-core MyGet gallery</a>.
+The latest version number of each library can be seen in that gallery.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>.NET Core (including the corefx repo) is licensed under the <a href="LICENSE">MIT license</a>.</p>
+
+<h2>
+<a id="net-foundation" class="anchor" href="#net-foundation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>.NET Foundation</h2>
+
+<p>.NET Core is a <a href="http://www.dotnetfoundation.org/projects">.NET Foundation</a> project.</p>
+
+<h2>
+<a id="related-projects" class="anchor" href="#related-projects" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Related Projects</h2>
+
+<p>There are many .NET related projects on GitHub.</p>
+
+<ul>
+<li>The <a href="https://github.com/Microsoft/dotnet">.NET home repo</a> links to 100s of .NET projects, from Microsoft and the community.</li>
+<li>The <a href="https://github.com/dotnet/core">.NET Core repo</a> links to .NET Core related projects from Microsoft.</li>
+<li>The <a href="https://github.com/aspnet/home">ASP.NET home repo</a> is the best place to start learning about ASP.NET Core.</li>
+<li>
+<a href="http://dotnet.github.io">dotnet.github.io</a> is a good place to discover .NET Foundation projects.</li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
